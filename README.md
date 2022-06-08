@@ -1,1 +1,1 @@
-# ig-spam-demo
+# ig-spam-detection-demo

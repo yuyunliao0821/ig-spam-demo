@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡易廣告貼文辨識</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="{{ url_for('static', filename='../static/js/predict_sentiment.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 class='title'>廣告成分有多少？</h1>
+    <!--main panel-->
+    <div class='panel'>
+        <p>在底下輸入po文內容，辨識此po廣告成分有多少：</p>
+
+        <!--Input section: textarea & likes, comments-->
+        <textarea placeholder="輸入Po文內容" name='text' id='textbox'></textarea>
+        <br>
+        <label >輸入Po文讚數：</label>
+        <input type="number" id="likes">
+        <label>輸入Po文留言數：</label>
+        <input type="number" id="comments">
+        <input type="submit" name="predict" value="預測！" id="button"></input>
+
+        <div id='prediction'>
+            <span id='original-text'></span>
+            <span id='prediction-text'></span>
+        </div>
+    </div>
+    
+</body>
+
+
